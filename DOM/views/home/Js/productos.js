@@ -8,7 +8,7 @@ export const productos = [
     consola: 'PS5',
     precio: 69.99,
     imagen: './views/home/assets/god.jpeg',
-    url: './views/juegos/GodOfWar.html'
+    url: './views/juegos/detallesjuegos.html'
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ export const productos = [
     consola: 'PC',
     precio: 59.99,
     imagen: './views/home/assets/elden.webp',
-    url: './views/juegos/EldenRing.html'
+    url: './views/juegos/detallesjuegos.html'
   },
   {
     id: 3,
@@ -28,7 +28,7 @@ export const productos = [
     consola: 'PS5',
     precio: 49.99,
     imagen: './views/home/assets/morales.jpeg',
-    url: './views/juegos/SpiderMan.html'
+    url: './views/juegos/detallesjuegos.html'
   },
   {
     id: 4,
@@ -38,7 +38,7 @@ export const productos = [
     consola: 'PS4',
     precio: 59.99,
     imagen: './views/home/assets/fifa24.jpeg',
-    url: './views/juegos/Fifa.html'
+    url: './views/juegos/detallesjuegos.html'
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ export const productos = [
     consola: 'Switch',
     precio: 69.99,
     imagen: './views/home/assets/zelda.jpg',
-    url: './views/juegos/Zelda.html'
+    url: './views/juegos/detallesjuegos.html'
   },
   {
     id: 6,
@@ -58,6 +58,6 @@ export const productos = [
     consola: 'PC',
     precio: 59.99,
     imagen: './views/home/assets/re4.jpg',
-    url: './views/juegos/ResidentEvil.html'
+    url: './views/juegos/detallesjuegos.html'
   }
 ];
