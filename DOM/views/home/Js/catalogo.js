@@ -77,6 +77,7 @@ function mostrarProductos(productosFiltrados) {
         <p class="card-text"><strong>Consola:</strong> ${producto.consola}</p>
         <p class="card-text"><strong>Precio:</strong> $${producto.precio}</p>
         <button class="btn btn-success">Agregar al carrito</button>
+        <a href='${producto.url}?id=${producto.id}' > Ver mas informacion del juego  </a>
       </div>
     `;
     contenedor.appendChild(card);

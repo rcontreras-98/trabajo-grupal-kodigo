@@ -3,6 +3,7 @@ import { productos } from './productos.js';
 
 // Obtiene los parámetros de la URL (por ejemplo, ?id=1)
 const urlParams = new URLSearchParams(window.location.search);
+console.log(urlParams)
 
 // Extrae el valor del parámetro "id" de la URL y lo convierte a número entero
 const id = parseInt(urlParams.get('id'));
