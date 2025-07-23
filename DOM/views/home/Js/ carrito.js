@@ -21,14 +21,16 @@ function renderCarrito() {
     const card = document.createElement('div');
     card.classList.add('col-md-4', 'mb-4');
     card.innerHTML = `
-      <div class="card h-100 shadow">
-        <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
-        <div class="card-body d-flex flex-column">
-          <h5 class="card-title">${producto.nombre}</h5>
-          <p class="card-text">$${producto.precio}</p>
-          <button class="btn btn-danger mt-auto eliminar" data-id="${producto.id}">Eliminar</button>
-        </div>
+       <div class="card h-100 shadow">
+
+      <div class="card-body d-flex flex-column game-card-body">
+        <h5 class="card-title">${producto.nombre}</h5>
+        <p class="card-text">$${producto.precio}</p>
+        <button class="btn btn-success mt-auto eliminar" data-id="${producto.id}">
+          <i class="fas fa-trash-alt me-1"></i> Eliminar
+        </button>
       </div>
+    </div>
     `;
     contenedor.appendChild(card);
   });
