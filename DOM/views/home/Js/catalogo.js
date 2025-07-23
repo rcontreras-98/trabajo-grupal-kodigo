@@ -1,5 +1,7 @@
 // catalogo.js
 import { productos } from './productos.js';
+//carrito
+import { agregarAlCarrito } from './carrito-data.js';
 
 // Elementos del DOM
 const contenedor = document.getElementById('contenedor-productos');
@@ -65,10 +67,9 @@ function mostrarProductos(productosFiltrados) {
     return;
   }
   
-  // Si hay productos, mostrarlos normalmente
   productosFiltrados.forEach(producto => {
     const card = document.createElement('div');
-    card.classList.add('card');
+    card.classList.add('card', 'm-2');
     card.innerHTML = `
       <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
       <div class="card-body">
@@ -76,11 +77,24 @@ function mostrarProductos(productosFiltrados) {
         <p class="card-text">${producto.descripcion}</p>
         <p class="card-text"><strong>Consola:</strong> ${producto.consola}</p>
         <p class="card-text"><strong>Precio:</strong> $${producto.precio}</p>
-        <button class="btn btn-success">Agregar al carrito</button>
-        <a href='${producto.url}?id=${producto.id}' > Ver mas informacion del juego  </a>
+        <button class="btn btn-success agregar-carrito" data-id="${producto.id}">Agregar al carrito</button>
+        <a href="${producto.url}?id=${producto.id}" class="btn btn-outline-primary mt-2">Ver más información</a>
       </div>
     `;
     contenedor.appendChild(card);
+  });
+
+  // AÑADIMOS LOS EVENTOS A LOS BOTONES CREADOS
+  const botonesAgregar = document.querySelectorAll('.agregar-carrito');
+  botonesAgregar.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const id = parseInt(e.target.getAttribute('data-id'));
+      const productoSeleccionado = productos.find(p => p.id === id);
+      if (productoSeleccionado) {
+        agregarAlCarrito(productoSeleccionado);
+        alert(`"${productoSeleccionado.nombre}" agregado al carrito.`);
+      }
+    });
   });
 }
 
