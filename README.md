@@ -22,5 +22,5 @@ filtrarlos por género y consola, ver detalles individuales de cada producto y g
 ## Devs
 
 - Proyecto desarrollado por 
-    Roberto Carlos Arce Argueta
-    Mauricio Antonio Bustillo Rosales
+    - Roberto Carlos Arce Argueta
+    - Mauricio Antonio Bustillo Rosales
